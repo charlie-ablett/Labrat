@@ -1,5 +1,11 @@
 ActiveAdmin.register Question do
-  permit_params :name, :instruction, :text
+  index do
+    column :name
+    column :instruction
+    column :text
+    default_actions
+  end
+
 
   form do |f|
     f.inputs "Details" do
@@ -8,6 +14,25 @@ ActiveAdmin.register Question do
       f.input :text
     end
     f.actions
+  end
+
+  show do |f|
+    panel "Question Details", :style => "width:80%" do
+      table :for => question do
+        tr :class => "name" do
+          th "Name", :style => "width:20%;"
+          td f.name
+        end
+        tr :class => "instruction" do
+          th "Instruction", :style => "width:20%;"
+          td f.instruction
+        end
+        tr :class => "text" do
+          th "Text", :style => "width:20%;"
+          td f.text
+        end
+      end
+    end
   end
   
   # See permitted parameters documentation:

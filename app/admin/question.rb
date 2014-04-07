@@ -1,5 +1,14 @@
 ActiveAdmin.register Question do
+  permit_params :name, :instruction, :text
 
+  form do |f|
+    f.inputs "Details" do
+      f.input :name
+      f.input :instruction
+      f.input :text
+    end
+    f.actions
+  end
   
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters

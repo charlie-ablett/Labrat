@@ -17,18 +17,18 @@ ActiveAdmin.register Question do
   end
 
   show do |f|
-    panel "Question Details", :style => "width:80%" do
+    panel "Question Details", :style => "width:70%" do
       table :for => question do
         tr :class => "name" do
-          th "Name", :style => "width:20%;"
+          th "Name", :style => "width:10%;"
           td f.name
         end
         tr :class => "instruction" do
-          th "Instruction", :style => "width:20%;"
+          th "Instruction", :style => "width:10%;"
           td f.instruction
         end
         tr :class => "text" do
-          th "Text", :style => "width:20%;"
+          th "Text", :style => "width:10%;"
           td f.text
         end
       end

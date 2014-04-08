@@ -40,6 +40,7 @@ group :development do
   gem "binding_of_caller"
 end
 
+gem "capistrano"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

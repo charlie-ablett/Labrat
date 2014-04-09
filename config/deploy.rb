@@ -2,6 +2,9 @@ set :application, "labrat"
 set :repository,  "git@github.com/ayumi5/Labrat.git"
 set :use_sudo,    false
 
+set :staging, :production
+server 'craftworks.enspiral.info', roles: %w{web app db assets}, user: 'www'
+
 set :normalize_asset_timestamps, false
 default_run_options[:shell] = '/bin/bash --login'
 
